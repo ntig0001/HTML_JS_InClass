@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercise 5 - First Encounter with Javascript</title>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <h1>Exercise 5 - First Encounter with Javascript</h1>
+    <script>
+      //Single line comment in Javascript
+      var answer = prompt("Please enter a number");
+      /*
+      Multiple 
+      Line
+      Comment
+      In Javascript
+      */
+        while(isNaN(parseFloat(answer))){
+            answer = prompt("You did not enter a number. Please enter a number.");
+          }
+      alert(answer + " is a number");
+    </script>  
+  </body>
+</html>

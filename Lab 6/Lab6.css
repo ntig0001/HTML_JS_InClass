@@ -1,0 +1,64 @@
+/*
+Program written by Elysé Ntigirishari
+*/
+
+body{
+  padding: 100px 0;
+  margin: 0;
+  background:rgb(245, 219, 204);
+  color: blue;
+}
+
+td{
+  text-align: left;
+}
+
+th{
+  text-align: center;
+}
+table{
+  margin: 30px;
+}
+#container{
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid blue;
+  padding: 10px;
+  font-family: sans-serif;
+  border-radius: 25px;
+}
+
+#container div #totalAmount{
+  padding:10px;
+  font-weight:bold;
+  background-color: rgb(226, 18, 181);
+}
+
+#productError{
+    padding:10px;
+    font-weight:bold;
+    background-color:#ff0;
+}
+
+#province option{
+  font-family: sans-serif;
+  color: blue;
+}
+
+#btnSubmit, #btnReset{
+  margin: 20px 40px;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+}
+
+#btnSubmit:hover, #btnReset:hover{
+  background-color:yellow;
+  color: blue;
+}
+ 
+#container input[type="text"]:hover,
+#container input[type="text"]:active {
+background-color: rgb(200, 231, 59);
+}

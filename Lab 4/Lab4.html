@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 4 by Elysé Ntigirishari</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1 class="center">Registration</h1>
+				<p class="center">Please enter the following information. Fields marked with an asterisk (
+					<span class="required">*</span>) are required.</p>
+			</header>
+
+			<div id="content">
+				<form action="" method="GET">
+					<fieldset>
+						<legend>Personal Information</legend>
+						<table>
+							<tr>
+								<td><span class="required">*</span>First Name:</td>
+								<td><input type="text" name="firstName" id="firstName" size="20" required></td>
+							</tr>	
+							<tr>
+								<td><span class="required">*</span>Last Name:</td>
+								<td><input type="text" name="lastName" id="lastName" size="20" required></td>
+							</tr>
+							<tr>
+								<td><span class="required">*</span>Address:</td>
+								<td><input type="text" name="address" id="address" size="40" required></td>
+							</tr>
+							<tr>
+								<td><span class="required">*</span>City:</td>
+								<td><input type="text" name="city" id="city" size="20" required></td>
+							</tr>
+							<tr>
+								<td><span class="required">*</span>Province:</td>
+								<td>
+									<select name="Province" size="1" required>
+										<option value="">Select a Province</option>
+										<option value="BC">British Columbia</option>
+										<option value="AB">Alberta</option>
+										<option value="SK">Saskatchewan</option>
+										<option value="MB">Manitoba</option>
+										<option value="ON">Ontario</option>
+										<option value="QC">Quebec</option>
+										<option value="NB">New Brunswick</option>
+										<option value="NS">Nova Scotia</option>
+										<option value="PE">Prince Edward Island</option>
+										<option value="NF">Newfoundland</option>
+										<option value="YK">Yukon</option>
+										<option value="NW">Northwest Territories</option>
+										<option value="NU">Nunavut</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td><span class="required">*</span>Postal Code:</td>
+								<td><input type="text" name="postalCode" id="postalCode" size="20" required></td>
+							</tr>
+							<tr>
+								<td><span class="required">*</span>Email Address:</td>
+								<td><input type="text" name="emailAddress" id="emailAddress" size="20" required></td>
+							</tr>
+							<tr>
+								<td><span class="required">*</span>Home Phone:</td>
+								<td><input type="text" name="homePhone" id="homePhone" size="20" required></td>
+							</tr>
+							<tr>
+								<td>Work Phone:</td>
+								<td><input type="text" name="workPhone" id="workPhone" size="20"></td>
+							</tr>
+						</table>
+					</fieldset>
+
+					<fieldset>
+						<legend>Payment Information</legend>
+						<!-- Credit Card Type | radio buttons -->
+						<table>
+							<tr>
+								<td>Credit Card Type:</td>
+								<td>
+									<img src="images/visa.png" alt="">
+									<input type="radio" name="creditCard" id="creditCardVisa">
+									<img src="images/mastercard.png" alt="">
+									<input type="radio" name="creditCard" id="creditCardMasterCard">
+									<img src="images/amex.png" alt="">
+									<input type="radio" name="creditCard" id="creditCardAmex">
+								</td>
+							</tr>
+
+							<tr>
+								<td>Credit Card Number:</td>
+								<td><input type="text" name="cardNumber" id="cardNumber" required></td>
+							</tr>
+
+							<tr>
+								<td>Expiry Date(MM/YY):</td>
+								<td>
+									<input type="text" name="expiryDate" size="2" required>/
+									<input type="text" name="expiryDate" size="2" required>
+								</td>
+							</tr>
+						</table>
+					</fieldset>
+
+					<fieldset>
+						<legend>Agree and Submit</legend>
+						<table>
+							<tr>
+								Check if you agree with our <a href="#">Terms and Conditions</a>.
+								<input type="checkbox" name="checkbox" value="yes">
+							</tr>	
+							<tr>
+								<td><input type="submit" id="submit" name="submit" value="Submit Registration"></td>
+								<td><input type="submit" id="reset" name="submit" value="Reset Form"></td>
+							</tr>
+						</table>
+					</fieldset>
+				</form>
+			</div><!-- End Content -->
+			<footer>	
+				<p class="center">&copy;2020 CST8285. All rights reserved.</p>
+			</footer>
+		</div><!-- End Wrapper -->
+	</body>
+	<img src="https://www.w3.org/Icons/valid-html20">
+</html>

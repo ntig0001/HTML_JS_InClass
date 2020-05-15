@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Timetable</title>
+  <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        border: 4px solid black;
+        width: 100%;
+      }
+
+      .centered{
+        text-align: center;
+        background-color: yellow;
+      }
+
+      td, th {
+        border: 3px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th colspan="8" class="centered">
+        <em>Timetable</em>
+      </th>
+    </tr>
+
+    <tr>
+      <th>Time</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+    </tr>
+    
+    <tr>
+      <td>10:00am</td>
+      <td rowspan="10" class="centered"><em>Day Off</em></td>
+      <td>
+        <p>
+          <strong>CST2355 310</strong><br>
+          10:00-11:00 <br>
+          WT119
+        </p>
+      </td>
+      <td></td>
+      <td rowspan="4"></td>
+      <td rowspan="5"></td>
+      <td rowspan="10" colspan="2" class="centered"><em>Weekend</em></td>
+    </tr>
+    
+    <tr>
+      <td>11:00am</td>
+      <td rowspan="9"></td>
+      <td rowspan="2">
+        <p>
+          <strong>CST2355 311</strong> <br>
+          11:00-13:00 <br>
+          WP210
+        </p>
+      </td>
+    </tr> 
+
+    <tr>
+      <td>12:00pm</td>
+    </tr>
+    <tr>
+      <td>1:00pm</td>
+      <td rowspan="7"></td>
+    </tr>
+
+    <tr>
+      <td>2:00pm</td>
+      <td rowspan="2">
+        <p>
+          <strong>ENL2019T 309</strong> <br>
+          14:00-16:00 <br>
+          WT119
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>3:00pm</td>
+      <td rowspan="2">
+        <p>
+          <strong>CST8285 311</strong> <br>
+          15:00-17:00 <br>
+          WB442
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>4:00pm</td>
+      <td rowspan="2"><em>Break</em></td>
+    </tr>
+    <tr>
+      <td>5:00pm</td>
+      <td rowspan="3"></td>
+    </tr>
+    <tr>
+      <td>6:00pm</td>
+      <td rowspan="2">
+        <p>
+          <strong>CST8285 310</strong> <br>
+          18:00-19:00 <br>
+          WP305
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>7:00pm</td>  
+    </tr>
+
+  </table>
+</body>
+</html>

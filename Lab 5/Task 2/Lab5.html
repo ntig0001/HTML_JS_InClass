@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 5_Task 2 by Elysé Ntigirishari</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h3>Lab 5 - Introduction to JavaScript</h3>
+
+		<input type="text" id="socialmedia" width="40">
+		<div>
+			<table>
+					<tr>
+							<th>Temperature conversion</td>
+					</tr>
+					<tr>
+							<td><input type="button" name="btnConvert" id="btnConvert" value="Convert!"></td>
+					</tr>
+			</table>
+		</div>
+	</body>
+	<img style="margin-top: 500px;" src="https://www.w3.org/Icons/valid-html20">
+
+	<script>
+		//This program converts temperature from celcius to Fahrenheit
+		var button = document.querySelector("#btnConvert");
+		button.addEventListener("click", function(){
+			convertToFahrenheit();
+		});
+
+		function convertToFahrenheit(temperature){
+			var temperature = prompt("Enter a temperature as celcius");
+			while(isNaN(temperature)){
+					temperature = prompt ("The number you entered is not a temperature. Please try again.");
+			}
+			if(!isNaN(temperature)){
+				var celcius = temperature;
+				var fahrenheit = celcius * 9 / 5 + 32;
+				var message= "Your temperature of " + celcius + "\xB0C is converted to " + fahrenheit + "\xB0F";
+				alert(message);
+			}	
+		}
+	</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercise 7 - Elyse Ntigirishari</title>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <h1>Exercise 7 - First Encouter with Javascript</h1>
+    
+    <script>
+        var answer = prompt("Enter a number");
+        while(isNaN(answer)){
+          answer = prompt("Please enter a number");
+          if(!isNaN(answer)){
+            for(var n=0;n<10;n++){
+              if(answer<9){
+                document.write(answer + ", ");
+              }else{
+                document.write(answer);
+              }
+            }
+          }
+        };      
+    </script>
+  </body>
+</html>
