@@ -73,12 +73,11 @@ function calculateInscription(){
     var theForm = document.forms["cakeform"];
     var includeInscription = theForm.elements["includeinscription"];
     var inscriptions = document.getElementById("inscriptions").value;
-    if(includeInscription.checked == true && inscriptions >= 0){
-        inscriptionPrice = 20 * inscriptions;
+    if(includeInscription.checked == true && inscriptions !== ""){
+        inscriptionPrice = 20;
     }else{
         inscriptionPrice = 0;
     }
-    console.log(inscriptions);
     return inscriptionPrice;
 }
         
