@@ -18,12 +18,6 @@ p{
 	font-style:italic;
 }
 
-.width{
-	width: inherit;
-	height: 30px;
-	border-radius: 5px;
-}
-
 #wrap{
 	display: flex;
 	text-align:left;
@@ -115,15 +109,28 @@ padding-top:10px;
 padding-bottom:10px;
 }
 
-#wrap div#totalPrice
+/* #wrap div#totalPrice
 {
     padding:10px;
     font-weight:bold;
     background-color:rgb(184, 184, 46);
-}
+} */
 
 #wrap label.radiolabel
 {
 font-weight:normal;
  display:inline;
+}
+
+.width{
+	width: inherit;
+	height: 30px;
+	border-radius: 5px;
+}
+
+.emptySelection{
+	display: block;
+	color :#8f0414;
+	background: none;
+	text-align: center;
 }

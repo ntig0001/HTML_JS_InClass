@@ -94,13 +94,39 @@ function hideTotal(){
     result.style.display='none';
 }
 
+function hideContactError(){
+    var contactError = document.getElementById('contactErrorMessage');
+    contactError.style.display='none';
+}
+
 /**
  * display the total as the customer clicks 'Check Total'
  */
 function showTotal(){
     var result = document.getElementById('totalPrice');
-    result.style.display='block';
+    result.style.cssText = `display: block;
+    color : #4f321e;
+    background-color: hsla(0, 100%, 90%, 0.3);
+    line-height: 30px;
+    border-radius:5px;
+    text-shadow: 2px 2px 8px #ffffff;
+    text-align: center;`
     result.innerHTML = "Your Total Is $" + defineTotal();
+}
+
+/**
+ * display empty selection on form
+ */
+function displayEmptySelection(message){
+    var result = document.getElementById('totalPrice');
+    result.style.cssText = `display: block;
+    color :#8f0414;
+    line-height: 30px;
+    border-radius:5px;
+    background-color: hsla(0, 100%, 90%, 0.3);
+    text-shadow: 2px 2px 8px #ffffff;
+    text-align: center;`
+    result.innerHTML = message;
 }
 
 /**
@@ -109,7 +135,8 @@ function showTotal(){
 function submitOrder(){
     var totalPrice = defineTotal();
     if(totalPrice === 0){
-        location.href = "cakeform.html";
+        var message = "Please Make A Selection";
+        displayEmptySelection(message);
         return 0;
     }else{
         location.href = "contact.html";
@@ -126,8 +153,8 @@ function finalizeOrder(){
     var phoneNumber = document.getElementById("phoneNumber").value;
     var commment = document.getElementById("message").value;
     if(customerName === "" || address === "" || phoneNumber === ""){
-        location.href = "contact.html";
-        return customerName + "Did Not Make An Order.";
+        var message = "Please Provide Your Name, Address and Phone Number";
+        displayEmptySelection(message);
     }else{
         //send user to thanks page
         location.href = "thanks.html";

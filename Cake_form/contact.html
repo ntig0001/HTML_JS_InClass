@@ -7,13 +7,14 @@
   <link href="index.css" rel="stylesheet" type="text/css" />
   <title>Contact</title>
 </head>
-<body>
+<body onload="hideContactError()">
   <div id="wrap">
     <form action="" id="contact" onsubmit="return false;">
       <div>
         <div>
           <fieldset class="container">
             <legend>Contact Details</legend>
+            <div style="color: #8f0414" id="totalPrice"></div>
             <label for='name'>Name</label>
             <input class="width" type="text" id="name" name='name'/>
             <br/>
