@@ -126,7 +126,13 @@ function finalizeOrder(){
     var address = document.getElementById("address").value;
     var phoneNumber = document.getElementById("phoneNumber").value;
     var commment = document.getElementById("message").value;
-    //send user to thanks page
-    location.href = "thanks.html";
-    return customerName + "Ordered a Cake.";
+    if(customerName === "" || address === "" || phoneNumber === ""){
+        location.href = "contact.html";
+        return customerName + "Did Not Make An Order.";
+    }else{
+        //send user to thanks page
+        location.href = "thanks.html";
+        return customerName + "Ordered a Cake.";
+    }
+
 }
