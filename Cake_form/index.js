@@ -95,7 +95,7 @@ function hideTotal(){
 }
 
 function hideContactError(){
-    var contactError = document.getElementById('contactErrorMessage');
+    var contactError = document.getElementById('totalPrice');
     contactError.style.display='none';
 }
 
@@ -115,9 +115,9 @@ function showTotal(){
 }
 
 /**
- * display empty selection on form
+ * display empty selection error on form
  */
-function displayEmptySelection(message){
+function displayEmptySelectionError(message){
     var result = document.getElementById('totalPrice');
     result.style.cssText = `display: block;
     color :#8f0414;
@@ -136,7 +136,7 @@ function submitOrder(){
     var totalPrice = defineTotal();
     if(totalPrice === 0){
         var message = "Please Make A Selection";
-        displayEmptySelection(message);
+        displayEmptySelectionError(message);
         return 0;
     }else{
         location.href = "contact.html";
@@ -144,21 +144,58 @@ function submitOrder(){
     }
 }
 
+/** get customer details and return them in an array */
+function getCustomerDetails(customerDetails){
+    if(customerDetails.includes("")){
+        var message = "Please Provide Your Name, Address and Phone Number";
+        displayEmptySelectionError(message);
+        return false;
+    }else{
+        hideContactError();
+        localStorage.setItem("customerDetails", JSON.stringify(customerDetails));
+        var storedData = [];
+        storedData = JSON.parse(localStorage.getItem("customerDetails"));
+        displayOrderDetails(storedData);
+    }
+}
+
 /**
  * finalize order, save data and take user to homepage
  */
 function finalizeOrder(){
-    var customerName = document.getElementById("name").value;
-    var address = document.getElementById("address").value;
-    var phoneNumber = document.getElementById("phoneNumber").value;
-    var commment = document.getElementById("message").value;
-    if(customerName === "" || address === "" || phoneNumber === ""){
-        var message = "Please Provide Your Name, Address and Phone Number";
-        displayEmptySelection(message);
-    }else{
-        //send user to thanks page
-        location.href = "thanks.html";
-        return customerName + "Ordered a Cake.";
-    }
+    var customerDetails = [];
+    var customerName = document.getElementById("name");
+    var address = document.getElementById("address");
+    var phoneNumber = document.getElementById("phoneNumber");
+    var comment = document.getElementById("message");
+    customerDetails[0] = customerName.value;
+    customerDetails[1] = address.value;
+    customerDetails[2] = phoneNumber.value;
+    customerDetails[3] = comment.value;
+    getCustomerDetails(customerDetails);
+}
 
+/**
+ *display order details when customer finishes ordering 
+ */
+function displayOrderDetails(retrievedDetails){
+    var customerDetails = [];
+    customerDetails = retrievedDetails;
+    console.log(customerDetails);
+    location.href = "contact.html";
+    // var customerName = document.getElementById("cName").value;
+    // customerName.innerHTML = "Name: " + customerDetails[0];
+
+    // var address = document.getElementById("cAddress");
+    // address.innerHTML = "Address: " + customerDetails[1];
+
+    // var phoneNumber = document.getElementById("cPhoneNumber");
+    // phoneNumber.innerHTML = "Phone Number: " + customerDetails[2];
+
+    // var comments = document.getElementById("comments");
+    // comments.innerHTML = "Comments: " + customerDetails[3];
+
+    // var inscriptions = document.getElementById("cInscriptions");
+    // inscriptions.innerHTML = "Inscriptions: " + calculateInscription().toString();
+    console.log("all is okay");
 }

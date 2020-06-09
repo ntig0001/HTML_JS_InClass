@@ -109,16 +109,9 @@ padding-top:10px;
 padding-bottom:10px;
 }
 
-/* #wrap div#totalPrice
-{
-    padding:10px;
-    font-weight:bold;
-    background-color:rgb(184, 184, 46);
-} */
-
 #wrap label.radiolabel
 {
-font-weight:normal;
+ font-weight:normal;
  display:inline;
 }
 

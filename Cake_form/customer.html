@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="index.js"></script>
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <title>Customer Details</title>
+</head>
+<body>
+  <div id="wrap">
+    <!-- <form action="" id="contact" onsubmit="return false;"> -->
+      <div>
+        <div>
+          <fieldset class="container">
+            <legend>Order Details</legend>
+            <div class="width" id="cName"></div>
+            <div class="width" id="cAddress">2</div>
+            <div class="width" id="cPhoneNumber">3</div>
+            <div class="width" id="cInscriptions">4</div>
+            <p class="width" id="comments"></p>
+          </fieldset>
+        </div>
+        <div>
+          <input type="submit" id="cancel" value="Home" 
+          onclick="location.href='cakeform.html'"/>
+        <!-- </form> -->
+        </div>
+      </div>
+  </div>
+  <!-- <script type="text/javascript" src="index.js">
+    var storedData = [];
+    storedData = JSON.parse(localStorage.getItem("customerDetails"));
+    console.log("Code is okay");
+    // // location.href = "customer.html";
+    // var random = "";
+    // random = "Hello";
+    displayOrderDetails(storedData);
+  </script> -->
+</body>
+</html>
