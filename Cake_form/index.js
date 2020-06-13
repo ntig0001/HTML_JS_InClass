@@ -112,7 +112,11 @@ function submitOrder(){
         var price = calculateTotal();
         var inscriptions = inscription.value;
         localStorage.setItem("price", price);
-        localStorage.setItem("inscriptions", inscriptions);
+        if(calculateInscription() === 0){
+            localStorage.setItem("inscriptions", "None");
+        }else{
+            localStorage.setItem("inscriptions", inscriptions);
+        }
         window.document.location = "contact.html";
     }
 }
