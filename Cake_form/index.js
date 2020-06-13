@@ -2,7 +2,7 @@ var message = ""; //message to display
 var btnSubmit = document.getElementById("submit");
 var btnFinalize = document.getElementById("finalize");
 var btnCancel = document.getElementById("cancel");
-var divTotal = document.querySelector("#totalPrice");
+var divTotal = document.querySelector("#display");
 var cakeForm = document.forms["cakeform"];        
 var inscription = document.getElementById("inscriptions");
 
@@ -33,11 +33,9 @@ filling_prices["Chocolate Mousse"] = 12;
 function getCakeSizePrice(){  
     var cakeSizePrice = 0;       
     var selectedCake = cakeForm.elements["selectedcake"];      
-    for(var i = 0; i < selectedCake.length; i++)
-    {
-        //if the radio button is checked
-        if(selectedCake[i].checked)
-        {
+    for(var i = 0; i < selectedCake.length; i++){
+        //if the radio button is checked assign price
+        if(selectedCake[i].checked){
           cakeSizePrice = cake_prices[selectedCake[i].value];
           break;
         }
@@ -56,7 +54,7 @@ function getFillingPrice(){
     return cakeFillingPrice;
 }
 
-//find the candles price based on a check box selection
+/**find the candles price based on a check box selection */
 function calculateCandles(){
     var candlePrice = 0;                  
     var includeCandles = cakeForm.elements["includecandles"];        
@@ -67,6 +65,7 @@ function calculateCandles(){
     return candlePrice;
 }
 
+/** get inscription price */
 function calculateInscription(){
     var inscriptionPrice = 0;                       
     var includeInscription = cakeForm.elements["includeinscription"];  
@@ -78,23 +77,18 @@ function calculateInscription(){
     }
     return inscriptionPrice;
 }
-        
+
+/** calculate total */
 function calculateTotal(){
     var cakePrice = getCakeSizePrice() + getFillingPrice() + calculateCandles() + calculateInscription();
     return cakePrice;
-}
-
-function hideContactError(){
-    var contactError = document.getElementById('totalPrice');      
-    contactError.style.display='none';                           
 }
 
 /**
  * display the total as the customer clicks 'Check Total'
  */
 function showTotal(){
-    // var btnTotal = document.querySelector("#total");
-    divTotal.classList.add(".total");
+    divTotal.style.color = "#140e05";
     divTotal.innerHTML = "Your Total Is $" + calculateTotal();
 }
 
@@ -102,26 +96,21 @@ function showTotal(){
  * display empty selection error on form
  */
 function displayEmptySelectionError(message){
-    divTotal.classList.add(".errorMessage");
+    divTotal.style.color = "#8f0414";
     divTotal.innerHTML = message;
 }
 
 /**
- * submit user order checking for null total
+ * submit user order checking for selection of a cake
  */
 function submitOrder(){
-    var totalPrice = calculateTotal();
-    if(totalPrice === 0){
-        message = "Please Make A Selection";
+    if(getCakeSizePrice() === 0 || getFillingPrice() === 0){
+        message = "Please Select a Cake First";
         displayEmptySelectionError(message);
         return 0;
     }else{
-        // var cakeData = []; //holds cake data to send to contact page
-        // cakeData[0] = calculateTotal();
-        // cakeData[1] = inscription;
         var price = calculateTotal();
         var inscriptions = inscription.value;
-        // console.log(price, inscriptions);
         localStorage.setItem("price", price);
         localStorage.setItem("inscriptions", inscriptions);
         window.document.location = "contact.html";

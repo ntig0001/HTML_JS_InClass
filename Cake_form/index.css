@@ -76,8 +76,9 @@ p{
 	height: 250px;
 }
 
-#totalPrice{
+#display{
 	text-align: center;
+	text-shadow: 2px 2px 8px #dbf19e;
 }
 
 #wrap label{
@@ -125,10 +126,20 @@ padding-bottom:10px;
  display:inline;
 }
 
+#emptySelection{ 
+	display: block;
+	text-align: center;
+	color : #8f0414;
+	background-color: hsla(0, 100%, 90%, 0.3);
+	line-height: 30px;
+	border-radius:5px;
+	text-shadow: 2px 2px 8px #ffffff;
+}
+
 .width{
 	width: inherit;
 	height: 30px;
-	border-radius: 5px;
+	border-radius: 10px;
 }
 
 .cd{
@@ -138,29 +149,3 @@ padding-bottom:10px;
 	text-shadow: 2px 2px 5px rgb(8, 2, 2);
 }
 
-.emptySelection{
-	display: block;
-	color :#8f0414;
-	background: none;
-	text-align: center;
-}
-
-.total{ 
-	display: block;
-	text-align: center;
-	color : #4f321e;
-	background-color: hsla(0, 100%, 90%, 0.3);
-	line-height: 30px;
-	border-radius:5px;
-	text-shadow: 2px 2px 8px #ffffff;
-}
-
-.errorMessage{
-	display: block;
-	text-align: center;
-	color :#8f0414;
-	line-height: 30px;
-	border-radius:5px;
-	background-color: hsla(0, 100%, 90%, 0.3);
-	text-shadow: 2px 2px 8px #ffffff;
-}

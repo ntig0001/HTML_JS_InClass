@@ -6,13 +6,13 @@ var phoneNumber = document.getElementById("phoneNumber");
 var comment = document.getElementById("message");
 var btnFinalize = document.getElementById("finalize");
 var btnCancel = document.getElementById("cancel");
-var divContactError = document.querySelector("#totalPrice");
+var divContactError = document.querySelector("#display");
 
 /**
  * display empty selection error on form
  */
 function displayEmptySelectionError(message){
-  divContactError.classList.add(".errorMessage");
+  divContactError.classList.add("#emptySelection");
   divContactError.innerHTML = message;
 }
 
@@ -32,21 +32,13 @@ function getCustomerDetails(customerDetails){
 * finalize order, save data and take user to homepage
 */
 function finalizeOrder(){
-  // var retrievedData = [];
-  // retrievedData = localStorage.getItem("cake_data").toString();
-  // var totalPrice = retrievedData[0];
-  // var inscription = retrievedData[1];
-  // console.log(retrievedData);
-  // console.log(totalPrice, inscription);
   var customerDetails = [];
   customerDetails[0] = customerName.value;
   customerDetails[1] = address.value;
   customerDetails[2] = phoneNumber.value;
-  customerDetails[3] = localStorage.getItem("inscriptions")
-  // customerDetails[3,4] = retrievedData;
-  customerDetails[4] = localStorage.getItem("price") //price
+  customerDetails[3] = localStorage.getItem("inscriptions");
+  customerDetails[4] = localStorage.getItem("price");
   customerDetails[5] = comment.value;
-  console.log(customerDetails);
   getCustomerDetails(customerDetails);
 }
 

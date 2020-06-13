@@ -14,14 +14,10 @@ displayOrderDetails();
 function displayOrderDetails(){
   var retrievedData = [];
   retrievedData = JSON.parse(localStorage.getItem("customerDetails"));
-  console.log(retrievedData);
-  
   customerName.innerHTML = "Name: " + retrievedData[0];
   address.innerHTML = "Address: " + retrievedData[1];
   phoneNumber.innerHTML = "Phone Number: " + retrievedData[2];
   inscriptions.innerHTML = "Inscriptions: " + retrievedData[3];
   price.innerHTML = "Total Price: " + retrievedData[4];
   comments.innerHTML = "Comments: " + retrievedData[5];
-
-  console.log("all is okay");
 }
