@@ -1,0 +1,151 @@
+body{
+	max-width: 500px;
+	height: 600px;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	margin: auto;
+	text-align: center;
+	background:url(https://images.unsplash.com/photo-1580682196951-fd9a115556a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+p{
+	font-size:13px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:rgb(246, 246, 246);
+	text-shadow: 2px 2px 8px rgb(8, 2, 2);
+	font-style:italic;
+}
+
+#wrap{
+	display: flex;
+	text-align:left;
+	margin-top:8px;
+	padding:5px;
+  font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+	font-size:13px;    
+  line-height:15px;
+}
+#wrap .cont_details fieldset,.cont_order fieldset{
+	width: 300px;
+	margin: 0 auto;
+	padding:20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#submit, #finalize, #cancel, #total{
+	border-radius: 10px;
+	height: 40px;
+	font-size:13px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:rgb(19, 2, 2);
+	text-shadow: 2px 2px 8px rgb(8, 2, 2);
+	font-style:italic;
+}
+
+#wrap legend{
+	font-size:16px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:rgb(246, 246, 246);
+	text-shadow: 2px 2px 8px rgb(8, 2, 2);
+	font-weight:bold;
+	font-style:italic;
+  padding-bottom:10px;
+}
+#wrap .cont_details input{
+	margin-bottom:10px;
+	color:rgb(216, 164, 67);
+}
+
+#wrap .input1:hover,.input1:active{
+	background: green;
+}
+
+#wrap .container {
+	border-radius: 10px;
+	width: 350px;
+}
+
+#wrap .details {
+	border-radius: 10px;
+	width: 350px;
+	height: 250px;
+}
+
+#display{
+	text-align: center;
+	text-shadow: 2px 2px 8px #dbf19e;
+}
+
+#wrap label{
+	display:block;
+	font-size:12px;
+	color:rgb(246, 246, 246);
+	text-shadow: 2px 2px 8px rgb(8, 2, 2);
+  font-weight:bold;
+}
+#wrap label.inlinelabel
+{
+    display:inline;
+}
+#wrap .cont_order input{
+	margin-bottom:5px;
+}
+#wrap .cont_order p{
+	padding-top:5px;
+}
+
+#wrap input[type="radio"]
+{
+margin-top:8px;
+margin-bottom:8px;
+}
+
+#wrap input[type="text"]:hover,
+textarea:hover,
+#wrap input[type="text"]:active {
+background-color: rgb(184, 184, 46);
+}
+
+#wrap input #submit
+{
+margin:10px;
+padding-left:20px;
+padding-right:20px;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+#wrap label.radiolabel
+{
+ font-weight:normal;
+ display:inline;
+}
+
+#emptySelection{ 
+	display: block;
+	text-align: center;
+	color : #8f0414;
+	background-color: hsla(0, 100%, 90%, 0.3);
+	line-height: 30px;
+	border-radius:5px;
+	text-shadow: 2px 2px 8px #ffffff;
+}
+
+.width{
+	width: inherit;
+	height: 30px;
+	border-radius: 10px;
+}
+
+.cd{
+	font-size:15px;
+	font-family:sans-serif, "Times New Roman", Times, serif;
+	color:white;
+	text-shadow: 2px 2px 5px rgb(8, 2, 2);
+}
+
