@@ -8,6 +8,7 @@ body{
 	background:url(https://images.unsplash.com/photo-1580682196951-fd9a115556a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
 	background-size: cover;
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 p{
 	font-size:13px;
@@ -66,12 +67,12 @@ p{
 
 #wrap .container {
 	border-radius: 10px;
-	width: 350px;
+	width: 300px;
 }
 
 #wrap .details {
 	border-radius: 10px;
-	width: 350px;
+	width: 300px;
 	height: 250px;
 }
 
