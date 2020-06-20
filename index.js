@@ -105,7 +105,7 @@ function displayEmptySelectionError(message){
  */
 function submitOrder(){
     if(getCakeSizePrice() === 0 || getFillingPrice() === 0){
-        message = "Please Select a Cake First";
+        message = "Please Make a Purchase First";
         displayEmptySelectionError(message);
         return 0;
     }else{
