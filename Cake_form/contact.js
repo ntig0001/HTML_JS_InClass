@@ -1,4 +1,4 @@
-/** Takes data passed from cakeform page to contact page */
+/** Takes data passed from index.html page to contact page */
 var message = ""; //message to display
 var customerName = document.getElementById("name");
 var address = document.getElementById("address");
