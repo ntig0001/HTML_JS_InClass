@@ -11,17 +11,21 @@ body{
 	background-repeat: no-repeat;
 } 
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 730px) {
     body {
-			width: 100px;
-			height: 100%;
-			margin: auto;
+			/* width: 400px;
+			min-height: 600px;
+			/* margin: auto;
 			display: flex;
 			justify-content: center;
-			align-items: center;
+			align-items: center; */
       background-size: cover;
 			background-position: fixed;
 			background-repeat: no-repeat;
+			min-width: 500px;
+      height:1000px;
+			margin: auto;
+			vertical-align: middle;
 		}
   
 }
