@@ -1,5 +1,5 @@
 body{
-	width: 100px;
+	width: 200px;
 	height: 100%;
 	margin: auto;
 	display: flex;
@@ -15,10 +15,12 @@ body{
     body {
       background-size: cover;
 			background-repeat: no-repeat;
-			min-width: 500px;
+			width: 200px;
       height:100%;
 			margin: auto;
-			vertical-align: middle;
+			display: flex;
+  		justify-content: center;
+  		align-items: center;
 		}
   
 }
