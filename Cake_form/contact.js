@@ -35,10 +35,23 @@ function finalizeOrder(){
   var customerDetails = [];
   customerDetails[0] = customerName.value;
   customerDetails[1] = address.value;
-  customerDetails[2] = phoneNumber.value;
+  if(validatePhoneNumber(phoneNumber) === false){
+    customerDetails[2] = "";
+  }else{
+    customerDetails[2] = phoneNumber.value;
+  }
   customerDetails[3] = localStorage.getItem("inscriptions");
   customerDetails[4] = localStorage.getItem("price");
   customerDetails[5] = comment.value;
   getCustomerDetails(customerDetails);
+}
+
+function validatePhoneNumber(phoneInput){
+  var phoneNumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if((phoneInput.value.match(phoneNumber))){
+     return true;
+  }else{
+    return false;
+  }
 }
 
