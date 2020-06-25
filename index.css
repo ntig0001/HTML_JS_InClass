@@ -13,17 +13,10 @@ body{
 
   @media screen and (max-width: 730px) {
     body {
-			/* width: 400px;
-			min-height: 600px;
-			/* margin: auto;
-			display: flex;
-			justify-content: center;
-			align-items: center; */
       background-size: cover;
-			background-position: fixed;
 			background-repeat: no-repeat;
 			min-width: 500px;
-      height:1000px;
+      height:100%;
 			margin: auto;
 			vertical-align: middle;
 		}
