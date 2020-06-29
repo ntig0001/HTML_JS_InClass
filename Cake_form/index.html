@@ -1,25 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cake Form</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div id="wrap">
-        <form action="" id="cakeform" onsubmit="return false;">
+    <div id="wrapper">
         <div>
-            <div class="cont_order">
-               <fieldset>
+            <h1>Lorem Cakes</h1>
+        </div>
+        <div class="info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum officiis quas, blanditiis atque odit magni esse eum quidem neque suscipit rerum tenetur eos dolorum in perferendis.Ad quaerat aliquid, ab odio quas reiciendis magni, unde adipisci quasi labore mollitia hic explicabo corporis omnis fuga tenetur accusamus!</p>
+        </div>
+        <div class="cont_order">
+            <form action="" class="cakeform" onsubmit="return false;"></form>
+                <fieldset>
                 <legend>Map your cake!</legend>
                 <label >Size</label>
-                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round6"/>Round cake 6" -  serves 8 people ($20)</label><br/>
-                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round8"/>Round cake 8" - serves 12 people ($25)</label><br/>
-                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round10"/>Round cake 10" - serves 16 people($35)</label><br/>
-                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round12"/>Round cake 12" - serves 30 people($75)</label><br/>
+                <label><input type="radio" class='radiolabel'  name="selectedcake" value="Round6"/>Round cake 6" -  serves 8 people ($20)</label><br/>
+                <label><input type="radio" class='radiolabel'  name="selectedcake" value="Round8"/>Round cake 8" - serves 12 people ($25)</label><br/>
+                <label><input type="radio" class='radiolabel'  name="selectedcake" value="Round10"/>Round cake 10" - serves 16 people($35)</label><br/>
+                <label><input type="radio" class='radiolabel'  name="selectedcake" value="Round12"/>Round cake 12" - serves 30 people($75)</label><br/>
                 <br/>
                 <label >Filling</label>
-         
                 <select class="width" id="filling" name="filling">
                 <option value="None">Select Filling</option>
                 <option value="Lemon">Lemon($5)</option>
@@ -34,28 +39,24 @@
                 <option value="Apricot">Apricot($8)</option>
                 <option value="Buttercream">Buttercream($7)</option>
                 <option value="Chocolate Mousse">Chocolate Mousse($12)</option>
-               </select>
-                <br/>
+                </select>
+                <br/><br/>
                 <p>
-                <label for='includecandles' class="inlinelabel">Include Candles($5)</label>
-               <input type="checkbox" id="includecandles" name="includecandles"/>
-               </p>
-               
+                <label for='candleCheckbox' class="inlinelabel">Include Candles($5)</label>
+                <input type="checkbox" id="candleCheckbox" name="candleCheckbox"/>
+                </p><br/>
                 <p>
-                <label class="inlinelabel" for='includeinscription'>Include Inscription($20)</label>
-                <input type="checkbox" id="includeinscription" name="includeinscription"/>
+                <label class="inlinelabel" for='inscriptCheckbox'>Include Inscription($20)</label>
+                <input type="checkbox" id="inscriptCheckbox" name="inscriptCheckbox"/>
                 <input class="width" type="text"  id="inscriptions" name="inscriptions" maxlength="35" placeholder="Enter Inscription"  />
-                </p>
+                </p><br/>
                 <div id="display"></div>  
                 </fieldset>
-            </div>
-            <div>
                 <input style="text-align: right;" type="submit" id="submit" value="Submit Order" onclick="submitOrder()"/>
-                </form>
-                <button id="total" style="margin-left: 160px;" onclick="showTotal()">Check Total</button>
-            </div>
-        </div>  
-    </div><!--End of wrap-->
+                <button id="total" onclick="showTotal()">Check Total</button>
+            </form>
+        </div>
+    </div><!--End of wrapper-->
     <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

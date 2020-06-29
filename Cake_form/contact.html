@@ -7,33 +7,35 @@
   <title>Contact</title>
 </head>
 <body>
-    <div id="wrap">
-      <form action="" id="contact" onsubmit="return false;">
-        <div>
-          <div>
-            <fieldset class="container">
-              <legend>Contact Details</legend>
-              <div style="color: #8f0414" id="display"></div>
-              <label for='name'>Name</label>
-              <input class="width" type="text" id="name" name="name" maxlength="45"/>
-              <br/>
-              <label for="address">Address</label>
-              <input class="width" type="text" id="address" name="address" maxlength="40"/>
-              <br/>
-              <label for="phoneNumber">Phone Number</label>
-              <input class="width" type="text"  id="phoneNumber" name="phoneNumber" maxlength="14">
-              <br/>
-              <label for="subject">Comments</label>
-              <textarea class="width" id="message" name="subject" maxlength="150" placeholder="Any additional details..." style="height:170px"></textarea>
-            </fieldset>
-          </div>
-          <div>
-            <input type="submit" id="finalize" value="Finalize Order" onclick="finalizeOrder()"/>
-            </form>
-            <input type="submit" id="cancel" value="Cancel" 
-            onclick="window.document.location = 'thanks.html'"/>
-          </div>
-        </div>
+    <div id="wrapper">
+      <div>
+        <h1>Lorem Cakes</h1>
+      </div>
+      <div class="info">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum officiis quas, blanditiis atque odit magni esse eum quidem neque suscipit rerum tenetur eos dolorum in perferendis.Ad quaerat aliquid, ab odio quas reiciendis magni, unde adipisci quasi labore mollitia hic explicabo corporis omnis fuga tenetur accusamus!</p>
+      </div>
+      <div>
+        <form action="" id="contact" onsubmit="return false;">
+          <fieldset class="container">
+            <legend>Contact Details</legend>
+            <div style="color: #8f0414" id="display"></div>
+            <label for='name'>Name</label>
+            <input class="width" type="text" id="name" name="name" maxlength="45"/>
+            <br/>
+            <label for="address">Address</label>
+            <input class="width" type="text" id="address" name="address" maxlength="40"/>
+            <br/>
+            <label for="phoneNumber">Phone Number</label>
+            <input class="width" type="text"  id="phoneNumber" name="phoneNumber" maxlength="14">
+            <br/>
+            <label for="subject">Comments</label>
+            <textarea class="width" id="message" name="subject" maxlength="150" placeholder="Any additional details..." style="height:170px"></textarea>
+          </fieldset>
+          <input type="submit" id="finalize" value="Finalize Order" onclick="finalizeOrder()"/>
+          <Button id="cancel" value="Cancel" 
+          onclick="window.document.location = 'thanks.html'"/>
+        </form>
+      </div>   
     </div>
   <script type="text/javascript" src="contact.js"></script>
 </body>

@@ -3,7 +3,7 @@ var btnSubmit = document.getElementById("submit");
 var btnFinalize = document.getElementById("finalize");
 var btnCancel = document.getElementById("cancel");
 var divTotal = document.querySelector("#display");
-var cakeForm = document.forms["cakeform"];        
+var selectedCake = document.querySelectorAll(".radiolabel");    
 var inscription = document.getElementById("inscriptions");
 
 /* Set up an associative array for cake size respective prices */
@@ -31,8 +31,7 @@ filling_prices["Chocolate Mousse"] = 12;
 
 /* find the price based on the size of the cake by taking user's the selection from radio button selection */
 function getCakeSizePrice(){  
-    var cakeSizePrice = 0;       
-    var selectedCake = cakeForm.elements["selectedcake"];      
+    var cakeSizePrice = 0;             
     for(var i = 0; i < selectedCake.length; i++){
         //if the radio button is checked assign price
         if(selectedCake[i].checked){
@@ -49,15 +48,18 @@ function getCakeSizePrice(){
 */
 function getFillingPrice(){
     var cakeFillingPrice = 0;          
-    var selectedFilling = cakeForm.elements["filling"];       
-    cakeFillingPrice = filling_prices[selectedFilling.value];
-    return cakeFillingPrice;
+    var selectedFilling =  document.getElementById("filling").options;
+    for(var i = 0; i < selectedFilling.length; i++){
+        cakeFillingPrice = filling_prices[selectedFilling.options[i]];
+    }
+    return selectedFilling;
+    // return cakeFillingPrice;
 }
 
 /**find the candles price based on a check box selection */
 function calculateCandles(){
     var candlePrice = 0;                  
-    var includeCandles = cakeForm.elements["includecandles"];        
+    var includeCandles = document.getElementById("candleCheckbox");       
     if(includeCandles.checked == true)
     {
         candlePrice=5;
@@ -68,9 +70,9 @@ function calculateCandles(){
 /** get inscription price */
 function calculateInscription(){
     var inscriptionPrice = 0;                       
-    var includeInscription = cakeForm.elements["includeinscription"];  
+    var inscriptionCheck = document.getElementById("inscriptCheckbox");
     var desiredInscript = inscription.value;
-    if(includeInscription.checked == true && desiredInscript !== ""){
+    if(inscriptionCheck.checked == true && desiredInscript !== ""){
         inscriptionPrice = 20;
     }else{
         inscriptionPrice = 0;
@@ -80,6 +82,7 @@ function calculateInscription(){
 
 /** calculate total */
 function calculateTotal(){
+    console.log(getFillingPrice());
     var cakePrice = getCakeSizePrice() + getFillingPrice() + calculateCandles() + calculateInscription();
     return cakePrice;
 }
