@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
   <link href="index.css" rel="stylesheet" type="text/css" />
   <title>Customer Details</title>
 </head>
 <body>
-    <div id="wrap">
-        <div>
+    <div id="wrapper">
           <div>
-            <fieldset class="details">
+            <h1>Ipsum Cakes</h1>
+          </div>
+          <div class="info">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum officiis quas, blanditiis atque odit magni esse eum quidem neque suscipit rerum tenetur eos dolorum in perferendis.Ad quaerat aliquid, ab odio quas reiciendis magni, unde adipisci quasi labore mollitia hic explicabo corporis omnis fuga tenetur accusamus!</p>
+          </div>
+          <div class="customer-info">
+            <fieldset id="container" class="details">
               <legend>Order Details</legend>
               <div class="width cd" id="cName"></div>
               <div class="width cd" id="cAddress"></div>
@@ -19,12 +25,9 @@
               <div class="width cd" id="cPrice"></div>
               <div class="width cd" id="comments"></div>
             </fieldset>
+              <input type="submit" id="cancel" value="Home" 
+              onclick="window.document.location ='index.html'"/>
           </div>
-          <div>
-            <input type="submit" id="cancel" value="Home" 
-            onclick="window.document.location ='index.html'"/>
-          </div>
-        </div>
     </div>
   <script type="text/javascript" src="customer.js"></script>
 </body>

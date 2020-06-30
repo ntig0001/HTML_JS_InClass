@@ -4,19 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="index.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
   <title>Contact</title>
 </head>
 <body>
     <div id="wrapper">
       <div>
-        <h1>Lorem Cakes</h1>
+        <h1>Ipsum Cakes</h1>
       </div>
       <div class="info">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum officiis quas, blanditiis atque odit magni esse eum quidem neque suscipit rerum tenetur eos dolorum in perferendis.Ad quaerat aliquid, ab odio quas reiciendis magni, unde adipisci quasi labore mollitia hic explicabo corporis omnis fuga tenetur accusamus!</p>
       </div>
-      <div>
+      <div class="contact-info">
         <form action="" id="contact" onsubmit="return false;">
-          <fieldset class="container">
+          <fieldset id="container">
             <legend>Contact Details</legend>
             <div style="color: #8f0414" id="display"></div>
             <label for='name'>Name</label>
@@ -29,10 +30,10 @@
             <input class="width" type="text"  id="phoneNumber" name="phoneNumber" maxlength="14">
             <br/>
             <label for="subject">Comments</label>
-            <textarea class="width" id="message" name="subject" maxlength="150" placeholder="Any additional details..." style="height:170px"></textarea>
+            <textarea class="width" id="message" name="subject" maxlength="150" placeholder="Any additional comments..." style="height:170px"></textarea>
           </fieldset>
           <input type="submit" id="finalize" value="Finalize Order" onclick="finalizeOrder()"/>
-          <Button id="cancel" value="Cancel" 
+          <input type="submit" id="cancel" value="Cancel" 
           onclick="window.document.location = 'thanks.html'"/>
         </form>
       </div>   
