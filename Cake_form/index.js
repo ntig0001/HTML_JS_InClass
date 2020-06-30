@@ -48,12 +48,9 @@ function getCakeSizePrice(){
 */
 function getFillingPrice(){
     var cakeFillingPrice = 0;          
-    var selectedFilling =  document.getElementById("filling").options;
-    for(var i = 0; i < selectedFilling.length; i++){
-        cakeFillingPrice = filling_prices[selectedFilling.options[i]];
-    }
-    return selectedFilling;
-    // return cakeFillingPrice;
+    var selectedFilling =  document.getElementById("filling");
+    cakeFillingPrice = filling_prices[selectedFilling.value];
+    return cakeFillingPrice;
 }
 
 /**find the candles price based on a check box selection */
@@ -82,7 +79,6 @@ function calculateInscription(){
 
 /** calculate total */
 function calculateTotal(){
-    console.log(getFillingPrice());
     var cakePrice = getCakeSizePrice() + getFillingPrice() + calculateCandles() + calculateInscription();
     return cakePrice;
 }
