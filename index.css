@@ -1,32 +1,17 @@
-body, html{
-	width: 200px;
-	height: 100%;
-	margin: auto;
-	display: flex;
-  justify-content: center;
-  align-items: center;
+* {
+	margin:0;
+	padding:0;
+}
+
+body{
 	background:url(https://images.unsplash.com/photo-1580682196951-fd9a115556a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 } 
 
-  @media screen and (max-width: 730px) {
-    body, html{
-      background-size: cover;
-			background-repeat: no-repeat;
-			width: 200px;
-      height:100%;
-			margin: auto;
-			display: flex;
-  		justify-content: center;
-  		align-items: center;
-		}
-  
-}
-
-
 p{
+	text-align: left;
 	font-size:13px;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	color:rgb(246, 246, 246);
@@ -34,27 +19,53 @@ p{
 	font-style:italic;
 }
 
-#wrap{
-	display: flex;
-	text-align:left;
-	/* margin-top:50%; */
-	padding:5px;
-  font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+h1{
+	color: antiquewhite;
+	font-family: 'Inter', sans-serif;
+	text-align: left;
+}
+
+#wrapper{
+	display:grid;
+	text-align:center;
+	grid-gap: 1rem;
+	font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+	margin: 20px 20px;
 	font-size:13px;    
   line-height:15px;
 }
-#wrap .cont_details fieldset,.cont_order fieldset{
+
+#wrapper .contact-info, .customer-info, .cont_details fieldset,.cont_order fieldset{
 	width: 300px;
 	margin: 0 auto;
-	padding:20px;
+	padding:5px 30px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
     border-radius: 10px;
 }
 
+#container{
+	text-align: left;
+	border-radius: 10px;
+	padding:5px;
+}
+
+#thanks-wrapper{
+	display:flex;
+	justify-content: space-evenly ;
+	margin-top: 20%;
+	font-size:16px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:rgb(246, 246, 246);
+	text-shadow: 2px 2px 8px rgb(8, 2, 2);
+	font-weight:400;
+	font-style:italic;
+}
+
 #submit, #finalize, #cancel, #total{
 	border-radius: 10px;
+	padding:5px;
 	height: 40px;
 	font-size:13px;
 	font-family:Georgia, "Times New Roman", Times, serif;
@@ -63,7 +74,7 @@ p{
 	font-style:italic;
 }
 
-#wrap legend{
+#wrapper legend{
 	font-size:16px;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	color:rgb(246, 246, 246);
@@ -72,21 +83,24 @@ p{
 	font-style:italic;
   padding-bottom:10px;
 }
-#wrap .cont_details input{
+
+#wrapper .cont_details input{
 	margin-bottom:10px;
 	color:rgb(216, 164, 67);
 }
 
-#wrap .input1:hover,.input1:active{
+#wrapper .input1:hover,.input1:active{
 	background: green;
 }
 
-#wrap .container {
+#wrapper .container {
+	padding:10px;
 	border-radius: 10px;
 	width: 300px;
 }
 
-#wrap .details {
+#wrapper .details {
+	padding: 10px;
 	border-radius: 10px;
 	width: 300px;
 	height: 250px;
@@ -97,49 +111,48 @@ p{
 	text-shadow: 2px 2px 8px #dbf19e;
 }
 
-#wrap label{
+#wrapper label{
 	display:block;
 	font-size:12px;
 	color:rgb(246, 246, 246);
 	text-shadow: 2px 2px 8px rgb(8, 2, 2);
   font-weight:bold;
 }
-#wrap label.inlinelabel
-{
+
+#wrapper label.inlinelabel{
     display:inline;
 }
-#wrap .cont_order input{
+
+#wrapper .cont_order input{
 	margin-bottom:5px;
 }
-#wrap .cont_order p{
+
+#wrapper .cont_order p{
 	padding-top:5px;
 }
 
-#wrap input[type="radio"]
-{
-margin-top:8px;
-margin-bottom:8px;
+#wrapper input[type="radio"]{
+	margin-top:8px;
+	margin-bottom:8px;
 }
 
-#wrap input[type="text"]:hover,
+#wrapper input[type="text"]:hover,
 textarea:hover,
-#wrap input[type="text"]:active {
-background-color: rgb(184, 184, 46);
+#wrapper input[type="text"]:active {
+	background-color: rgb(184, 184, 46);
 }
 
-#wrap input #submit
-{
-margin:10px;
-padding-left:20px;
-padding-right:20px;
-padding-top:10px;
-padding-bottom:10px;
+#wrapper input #submit{
+	margin:10px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:10px;
+	padding-bottom:10px;
 }
 
-#wrap label.radiolabel
-{
- font-weight:normal;
- display:inline;
+#wrapper label.radiolabel{
+  font-weight:normal;
+  display:inline;
 }
 
 #emptySelection{ 
@@ -153,9 +166,9 @@ padding-bottom:10px;
 }
 
 .width{
-	width: inherit;
+	width: 300px;
 	height: 30px;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 .cd{
@@ -163,5 +176,9 @@ padding-bottom:10px;
 	font-family:sans-serif, "Times New Roman", Times, serif;
 	color:white;
 	text-shadow: 2px 2px 5px rgb(8, 2, 2);
+}
+
+div{
+	display: inline-block;
 }
 
