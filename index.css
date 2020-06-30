@@ -182,3 +182,14 @@ div{
 	display: inline-block;
 }
 
+@media only screen and (max-width:550px){
+	#wrapper{
+		height: 100vh;
+		padding: 10px;
+	}
+
+	#thanks-wrapper{
+		height: 100vh;
+	}
+}
+
