@@ -15,7 +15,7 @@ p{
 	font-size:13px;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	color:rgb(246, 246, 246);
-	text-shadow: 2px 2px 8px rgb(8, 2, 2);
+	text-shadow: 2px 2px 8px rgb(34, 23, 4);
 	font-style:italic;
 }
 
@@ -23,19 +23,24 @@ h1{
 	color: antiquewhite;
 	font-family: 'Inter', sans-serif;
 	text-align: left;
+	grid-area: title;
+}
+
+div{
+	display: inline-block;
 }
 
 #wrapper{
 	display:grid;
 	text-align:center;
-	grid-gap: 1rem;
+	grid-gap: 0.8rem;
 	font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
 	margin: 20px 20px;
 	font-size:13px;    
-  line-height:15px;
+	line-height:15px;
 }
 
-#wrapper .contact-info, .customer-info, .cont_details fieldset,.cont_order fieldset{
+#wrapper .customer-info, #contact fieldset,.customer-info fieldset{
 	width: 300px;
 	margin: 0 auto;
 	padding:5px 30px;
@@ -58,7 +63,7 @@ h1{
 	font-size:16px;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	color:rgb(246, 246, 246);
-	text-shadow: 2px 2px 8px rgb(8, 2, 2);
+	text-shadow: 2px 2px 8px rgb(34, 23, 4);
 	font-weight:400;
 	font-style:italic;
 }
@@ -69,8 +74,8 @@ h1{
 	height: 40px;
 	font-size:13px;
 	font-family:Georgia, "Times New Roman", Times, serif;
-	color:rgb(19, 2, 2);
-	text-shadow: 2px 2px 8px rgb(8, 2, 2);
+	color:rgb(34, 23, 4);
+	text-shadow: 2px 2px 8px rgb(34, 23, 4);
 	font-style:italic;
 }
 
@@ -78,15 +83,15 @@ h1{
 	font-size:16px;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	color:rgb(246, 246, 246);
-	text-shadow: 2px 2px 8px rgb(8, 2, 2);
+	text-shadow: 2px 2px 8px rgb(34, 23, 4);
 	font-weight:bold;
 	font-style:italic;
   padding-bottom:10px;
 }
 
-#wrapper .cont_details input{
+#wrapper #contact input{
 	margin-bottom:10px;
-	color:rgb(216, 164, 67);
+	color:rgb(34, 23, 4);
 }
 
 #wrapper .input1:hover,.input1:active{
@@ -115,7 +120,7 @@ h1{
 	display:block;
 	font-size:12px;
 	color:rgb(246, 246, 246);
-	text-shadow: 2px 2px 8px rgb(8, 2, 2);
+	text-shadow: 2px 2px 8px rgb(34, 23, 4);
   font-weight:bold;
 }
 
@@ -175,17 +180,28 @@ textarea:hover,
 	font-size:15px;
 	font-family:sans-serif, "Times New Roman", Times, serif;
 	color:white;
-	text-shadow: 2px 2px 5px rgb(8, 2, 2);
-}
-
-div{
-	display: inline-block;
+	text-shadow: 2px 2px 5px rgb(34, 23, 4);
 }
 
 @media only screen and (max-width:550px){
 	#wrapper{
 		height: 100vh;
-		padding: 10px;
+		padding: 0;
+		margin: 20px;
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.1fr 0.3fr 1.5fr;
+		grid-template-areas:
+			"title"
+			"main-info"
+			"customer-info";
+	}
+
+	.main-info{
+		grid-area: main-info;
+	}
+	
+	.customer-info{
+		grid-area: customer-info;
 	}
 
 	#thanks-wrapper{
