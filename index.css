@@ -43,7 +43,7 @@ div{
 #wrapper .customer-info, #contact fieldset,.customer-info fieldset{
 	width: 300px;
 	margin: 0 auto;
-	padding:5px 30px;
+	padding:5px 5px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
@@ -202,6 +202,10 @@ textarea:hover,
 	
 	.customer-info{
 		grid-area: customer-info;
+	}
+
+	#wrapper{
+		height: 100vh;
 	}
 
 	#thanks-wrapper{
